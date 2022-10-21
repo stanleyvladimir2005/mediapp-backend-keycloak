@@ -7,8 +7,8 @@ import org.keycloak.admin.client.KeycloakBuilder;
 
 public class KeyCloakConfig {
 	public static Keycloak keycloak = null;
-	public final static String serverUrl = "http://localhost:9080/auth"; //KeyCloak Wildfly
-	//public final static String serverUrl = "http://localhost:9080"; //KeyCloak QUARKUS
+	public final static String serverUrl = "http://localhost:9595/auth"; //KeyCloak Wildfly
+	//public final static String serverUrl = "http://localhost:9595"; //KeyCloak QUARKUS
 	public final static String realm = "mediapp";
 	public final static String clientId = "mediapp-backend";
 	public final static String clientSecret = ""; //necesario en confidencial
