@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.5'
+    id 'org.springframework.boot' version '2.7.6'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
     id 'java'
 }
@@ -22,8 +22,8 @@ dependencies {
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
     implementation 'net.sf.jasperreports:jasperreports:6.20.0'
     implementation 'com.lowagie:itext:2.1.7' //Versiones superiores no funcionan
-    implementation 'org.springdoc:springdoc-openapi-ui:1.6.11'
-    implementation 'org.springdoc:springdoc-openapi-security:1.6.12'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.13'
+    implementation 'org.springdoc:springdoc-openapi-security:1.6.13'
     implementation 'org.keycloak:keycloak-spring-boot-starter:19.0.3'
     implementation 'org.keycloak:keycloak-admin-client:19.0.3'  //Solo por si se desea manipular
     compileOnly 'org.projectlombok:lombok'
