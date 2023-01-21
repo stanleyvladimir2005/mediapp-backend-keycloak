@@ -23,8 +23,8 @@ dependencies {
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
     implementation 'net.sf.jasperreports:jasperreports:6.20.0'
     implementation 'com.lowagie:itext:2.1.7' //Versiones superiores no funcionan
-    implementation 'org.springdoc:springdoc-openapi-ui:1.6.13'
-    implementation 'org.springdoc:springdoc-openapi-security:1.6.13'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.14'
+    implementation 'org.springdoc:springdoc-openapi-security:1.6.14'
     implementation 'org.keycloak:keycloak-spring-boot-starter:19.0.3'
     implementation 'org.keycloak:keycloak-admin-client:19.0.3'  //Solo por si se desea manipular
     compileOnly 'org.projectlombok:lombok'
