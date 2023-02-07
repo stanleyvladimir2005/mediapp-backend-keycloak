@@ -6,8 +6,6 @@ import com.mitocode.repo.IMenuRepo;
 import com.mitocode.service.IMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -22,17 +20,8 @@ public class MenuServiceImpl extends CRUDImpl<Menu, Integer> implements IMenuSer
     }
 
     @Override
-    public List<Menu> listarMenuPorUsuario(String user_name) {
-        List<Menu> menus =  new ArrayList<>();
-        repo.listarMenuPorUsuario(user_name).forEach( x -> {
-            Menu m = new Menu();
-            m.setIdMenu((Integer.parseInt(String.valueOf(x[0]))));
-            m.setIcon(String.valueOf(x[1]));
-            m.setName(String.valueOf(x[2]));
-            m.setUrl(String.valueOf(x[3]));
-
-            menus.add(m);
-        });
-        return menus;
+    public List<Menu> getMenusByUserName(String userName) {
+        //String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        return repo.getMenusByUsername(userName);
     }
 }

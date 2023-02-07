@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.LocaleResolver;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
@@ -28,11 +27,12 @@ public class LanguageController {
 
     @GetMapping("/locale/{loc}")
     public ResponseEntity<Void> changeLocale(@PathVariable("loc") String loc) {
-        Locale userLocale = switch (loc) {
-            case "en" -> Locale.ENGLISH;
-            default -> Locale.ROOT;
-        };
-
+        Locale userLocale;
+        if (loc.equals("en"))
+            userLocale = Locale.ENGLISH;
+        else
+            userLocale = Locale.ROOT;
+        
         localeResolver.setLocale(httpServletRequest, httpServletResponse, userLocale);
         return new ResponseEntity<>(HttpStatus.OK);
     }
