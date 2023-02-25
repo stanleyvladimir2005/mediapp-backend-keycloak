@@ -35,13 +35,13 @@ public class SpecialtyController {
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Object> save(@Valid @RequestBody Specialty Specialty) {
 		Specialty spe = service.save(Specialty);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(spe.getIdSpelcialty()).toUri();
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(spe.getIdSpecialty()).toUri();
 		return ResponseEntity.created(location).build();
 	}
 
 	@PutMapping ("/{id}")
 	public ResponseEntity<Specialty> update(@PathVariable("id") Integer id,@Valid @RequestBody Specialty specialty) {
-		specialty.setIdSpelcialty(id);
+		specialty.setIdSpecialty(id);
 		Specialty spe = service.update(specialty,id);
 		return new ResponseEntity<>(spe,OK);
 	}

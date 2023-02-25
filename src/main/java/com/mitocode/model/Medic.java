@@ -32,8 +32,8 @@ public class Medic {
 	private String dui;
 
 	@Size(min = 8, max = 8, message = "{address.size}")
-	@Column(name = "address", nullable = false, length = 8)
-	private String address;
+	@Column(name = "phone", nullable = false, length = 8)
+	private String phone;
 	
 	@Email
 	@Size(message = "{email.size")

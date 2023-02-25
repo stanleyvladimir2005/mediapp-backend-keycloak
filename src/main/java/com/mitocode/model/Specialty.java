@@ -10,17 +10,17 @@ import javax.validation.constraints.Size;
 @Data
 @Entity
 @Table(name = "specialty")
-@SQLDelete(sql = "UPDATE specialty SET status = false WHERE id_spelcialty = ?")
+@SQLDelete(sql = "UPDATE specialty SET status = false WHERE id_specialty = ?")
 @Where(clause = "status = true")
 public class Specialty {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idSpelcialty;
+	private Integer idSpecialty;
 	
-	@Column(name = "spelcialtyName", nullable = false, length = 50)
+	@Column(name = "specialtyName", nullable = false, length = 50)
 	@Size(min=3, message ="{especialidad_name.size}")
-	private String spelcialtyName;
+	private String specialtyName;
 	
 	@Column(name = "status")
 	private Boolean status;
