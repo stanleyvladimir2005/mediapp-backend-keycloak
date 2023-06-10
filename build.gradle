@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.11'
+    id 'org.springframework.boot' version '2.7.12'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
     id 'java'
     id 'org.sonarqube' version '4.0.0.2929'
@@ -21,7 +21,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-devtools'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
-    implementation 'net.sf.jasperreports:jasperreports:6.20.4'
+    implementation 'net.sf.jasperreports:jasperreports:6.20.5'
     implementation 'com.github.librepdf:openpdf:1.3.30'
     implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
     implementation 'org.springdoc:springdoc-openapi-security:1.7.0'
