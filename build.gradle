@@ -24,7 +24,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-devtools'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
     implementation 'net.sf.jasperreports:jasperreports:7.0.0'
-    implementation 'com.github.librepdf:openpdf:2.0.2'
+    implementation 'com.github.librepdf:openpdf:2.0.3'
     implementation 'org.springdoc:springdoc-openapi-ui:1.8.0'
     implementation 'org.springdoc:springdoc-openapi-security:1.8.0'
     implementation 'org.keycloak:keycloak-spring-boot-starter:19.0.3'
